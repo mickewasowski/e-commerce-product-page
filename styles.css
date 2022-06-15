@@ -228,7 +228,7 @@ main {
 }
 
 .quantity-buttons>span {
-    width: 4.8rem;
+    width: 4rem;
     height: 3.5rem;
     background-color: inherit;
     border-radius: inherit;
@@ -267,7 +267,7 @@ main {
 }
 
 .add-to-cart-btn>button {
-    width: 17rem;
+    width: 19rem;
     height: 3.5rem;
     border: none;
     border-radius: 10px;
@@ -275,4 +275,9 @@ main {
     background-color: hsl(26, 100%, 55%);
     font-size: 1.1rem;
     font-weight: bold;
+    text-align: center;
+}
+
+.add-to-cart-btn>button:hover {
+    cursor: pointer;
 }
