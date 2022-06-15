@@ -5,7 +5,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Kumbh Sans', sans-serif;
-    font-size: 16px;
     background-color: hsl(0, 0%, 100%);
 }
 
@@ -99,11 +98,12 @@ main {
 .shoe-images-container {
     display: flex;
     flex-direction: column;
+    width: 500px;
 }
 
 .main-image img {
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     border-radius: 15px;
 }
 
@@ -115,14 +115,14 @@ main {
 }
 
 .other-images>div.image-container {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 10px;
 }
 
 .other-images>div.image-container>div.image {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     background-position: center;
     background-repeat: no-repeat;
     background-clip: cover;
@@ -139,13 +139,74 @@ main {
     opacity: .4;
 }
 
-/* .other-images img {
-    width: 80px;
-    height: 80px;
-    border-radius: 10px;
+/* details section */
+
+.details {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-.other-images img:hover {
-    opacity: .4;
-} */
-*/ */
+/* headings */
+#sneaker-h3 {
+    color: hsl(26, 100%, 55%);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1rem;
+}
+
+#limited-h1 {
+    color: hsl(220, 13%, 13%);
+    font-size: 3rem;
+    margin-top: 1rem;
+}
+
+/* description */
+.description>p {
+    line-height: 1.8rem;
+    color: hsl(219, 9%, 45%);
+}
+
+/* prices */
+.price {
+    display: flex;
+    flex-direction: column;
+}
+
+.current-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.current-price>p {
+    margin-right: 1.5rem;
+}
+
+.current-price p:nth-child(1) {
+    font-size: 2rem;
+    font-weight: 700;
+    color: hsl(220, 13%, 13%);
+}
+
+.current-price p:nth-child(2) {
+    color: hsl(26, 100%, 55%);
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 3px 7px;
+    background-color: hsl(25, 100%, 94%);
+    border-radius: 5px;
+}
+
+.original-price {
+    margin-top: 1rem;
+}
+
+.original-price>p {
+    color: hsl(220, 14%, 75%);
+    font-weight: bold;
+    text-decoration: line-through;
+}
