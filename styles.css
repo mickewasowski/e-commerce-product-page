@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
-* {
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -59,8 +59,17 @@ header {
 
 .navigation ul li {
     margin: 15px;
+    padding: 2.9rem 0;
     list-style-type: none;
     color: hsl(219, 9%, 45%);
+    border-bottom: 4px solid transparent;
+
+}
+
+.navigation ul li:hover {
+    border-bottom: 4px solid hsl(26, 100%, 55%);
+    cursor: pointer;
+    color: hsl(220, 13%, 13%);
 }
 
 
@@ -76,12 +85,24 @@ header {
 }
 
 .cart-icon {
-    color: hsl(219, 9%, 45%);
+    fill: hsl(219, 9%, 45%);
 }
 
-.user-icon>a>img {
+.user-icon {
     width: 50px;
     height: 50px;
+    border-radius: 50px;
+}
+
+.user-icon>img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.user-icon:hover {
+    outline: 3px solid hsl(26, 100%, 55%);
+    cursor: pointer;
 }
 
 /* main content */
@@ -90,7 +111,7 @@ main {
     margin-top: 5rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 5rem 3rem 0 3rem;
 }
 
@@ -258,12 +279,11 @@ main {
     padding-top: 7px;
 }
 
-.add-to-cart-btn>svg {
+.add-to-cart-btn>img {
     position: relative;
     display: inline;
     right: -28%;
     top: 3px;
-    background-color: hsl(26, 100%, 55%);
 }
 
 .add-to-cart-btn>button {
@@ -280,4 +300,5 @@ main {
 
 .add-to-cart-btn>button:hover {
     cursor: pointer;
+    background-color: hsla(26, 100%, 55%, .7);
 }
