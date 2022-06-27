@@ -11,3 +11,19 @@ function expandCartList() {
     }
 }
 
+function increment() {
+    let currentValue = Number(document.getElementById("quantity").innerHTML);
+
+    document.getElementById("quantity").innerHTML = currentValue + 1;
+}
+
+function decrement() {
+    let currentValue = Number(document.getElementById("quantity").innerHTML);
+
+    if (currentValue - 1 > 0) {
+        document.getElementById("quantity").innerHTML = currentValue - 1;
+    } else if (currentValue - 1 === 0) {
+        document.getElementById("quantity").innerHTML = 0;
+    }
+}
+
