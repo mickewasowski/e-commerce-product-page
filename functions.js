@@ -11,6 +11,63 @@ function expandCartList() {
     }
 }
 
+function hideCart() {
+    let currentElement = event.target;
+
+    if (currentElement.classList.contains("cart-icon")) {
+        return;
+    }
+    if (currentElement.classList.contains("cart-icon-check")) {
+        return;
+    }
+    if (currentElement.classList.contains("cart-container")) {
+        return;
+    }
+    if (currentElement.classList.contains("user-cart-container")) {
+        return;
+    }
+    if (currentElement.classList.contains("cart-item")) {
+        return;
+    }
+    if (currentElement.classList.contains("image-thumbnail")) {
+        return;
+    }
+    if (currentElement.classList.contains("item-details")) {
+        return;
+    }
+    if (currentElement.classList.contains("delete-icon")) {
+        return;
+    }
+    if (currentElement.id === "cart-heading") {
+        return;
+    }
+    if (currentElement.id === "cart-content") {
+        return;
+    }
+    if (currentElement.id === "cart-list") {
+        return;
+    }
+    if (currentElement.id === "empty-cart") {
+        return;
+    }
+    if (currentElement.id === "cart-count") {
+        return;
+    }
+    if (currentElement.id === "delete-icon-svg") {
+        return;
+    }
+    if (currentElement.id === "checkout-btn") {
+        return;
+    }
+
+    if (currentElement.parentNode.id === "cart-heading") {
+        return;
+    }
+
+    let cartList = document.getElementById("cart-list");
+    cartList.style.display = "none";
+}
+
 function increment() {
     let currentValue = Number(document.getElementById("quantity").value);
 
