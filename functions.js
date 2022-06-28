@@ -27,3 +27,48 @@ function decrement() {
     }
 }
 
+function addToCart() {
+    let quantity = Number(document.getElementById("quantity").innerHTML);
+
+    if (quantity === 0) {
+        return;
+    }
+
+    let parentDiv = document.getElementsByClassName("cart-item")[0];
+    parentDiv.style.display = "flex";
+
+    let h5Parent = document.getElementsByClassName("item-details")[0];
+
+    let getH5Element = document.getElementById("items-price");
+
+    if (getH5Element !== null) {
+        h5Parent.removeChild(getH5Element);
+    }
+
+    let pricePerUnit = 125;
+    let total = quantity * pricePerUnit;
+
+    let h5Element = document.createElement('h5');
+    h5Element.setAttribute("id", "items-price");
+
+    h5Element.innerHTML = `$${pricePerUnit}.00 x ${quantity}&nbsp;<strong>$${total}.00</strong>`;
+    h5Element.style.display = "flex";
+
+    let emptyCartText = document.getElementById("empty-cart");
+    emptyCartText.style.display = "none";
+    h5Parent.appendChild(h5Element);
+
+    let checkoutBtn = document.getElementById("checkout-btn");
+    checkoutBtn.style.display = "block";
+}
+
+function removeFromCart() {
+    let parentDiv = document.getElementsByClassName("cart-item")[0];
+    parentDiv.style.display = "none";
+
+    let checkoutBtn = document.getElementById("checkout-btn");
+    checkoutBtn.style.display = "none";
+
+    let emptyCartText = document.getElementById("empty-cart");
+    emptyCartText.style.display = "block";
+}

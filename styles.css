@@ -94,11 +94,13 @@ header {
     fill: hsl(219, 9%, 45%);
 }
 
+
+/* cart dropdown */
 #cart-list {
     position: absolute;
-    width: 20rem;
-    height: 13rem;
-    top: 10.6%;
+    width: 21rem;
+    height: 14rem;
+    top: 9%;
     right: 7%;
     background-color: hsl(0, 0%, 100%);
     border-radius: 10px;
@@ -108,7 +110,7 @@ header {
     flex-direction: column;
 }
 
-#cart-list div:nth-child(1) {
+#cart-heading {
     height: 25%;
     border-bottom: 3px solid hsl(223, 64%, 98%);
 }
@@ -119,19 +121,97 @@ header {
     color: hsl(220, 13%, 13%);
 }
 
-#cart-list div:nth-child(2) {
+/* #cart-list div:nth-child(2) {
     height: 75%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-}
+} */
 
-#cart-list div:nth-child(2)>p {
+#empty-cart {
     text-align: center;
     color: hsl(219, 9%, 45%);
     font-weight: bold;
 }
+
+#cart-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1.1rem 0;
+}
+
+.cart-item {
+    /* display: flex; */
+    /* display: none; */
+    flex-direction: row;
+    align-self: center;
+    align-items: center;
+    width: 90%;
+    height: 3rem;
+}
+
+
+.image-thumbnail {
+    width: 55px;
+    height: 55px;
+}
+
+.image-thumbnail>img {
+    width: 50px;
+    height: 50px;
+    border-radius: 7px;
+}
+
+.item-details {
+    padding: 0 .8rem;
+    line-height: 1.8;
+}
+
+.item-details h5 {
+    margin: 0;
+    text-align: left;
+    color: hsl(219, 9%, 45%);
+    font-weight: 300;
+    align-self: flex-start;
+}
+
+.item-details h5:nth-child(1) {
+    font-size: .9rem;
+}
+
+.item-details h5:nth-child(2) {
+    font-size: 1rem;
+}
+
+.item-details>h5>strong {
+    color: hsl(220, 13%, 13%);
+}
+
+.delete-icon {
+    padding-left: 10px;
+}
+
+.delete-icon:hover {
+    cursor: pointer;
+}
+
+#checkout-btn {
+    /* display: none; */
+    position: relative;
+    top: 22%;
+    border: none;
+    padding: 1rem;
+    width: 90%;
+    align-self: center;
+    border-radius: 10px;
+    background-color: hsl(26, 100%, 55%);
+    font-size: 1rem;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+}
+
+/* user icon */
 
 .user-icon {
     width: 50px;
