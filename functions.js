@@ -29,10 +29,10 @@ function hideCart() {
     if (currentElement.classList.contains("cart-item")) {
         return;
     }
-    if (currentElement.classList.contains("image-thumbnail")) {
+    if (currentElement.classList.contains("image-thumbnail") || currentElement.parentNode.classList.contains("image-thumbnail")) {
         return;
     }
-    if (currentElement.classList.contains("item-details")) {
+    if (currentElement.classList.contains("item-details") || currentElement.parentNode.classList.contains("item-details")) {
         return;
     }
     if (currentElement.classList.contains("delete-icon")) {
@@ -59,7 +59,6 @@ function hideCart() {
     if (currentElement.id === "checkout-btn") {
         return;
     }
-
     if (currentElement.parentNode.id === "cart-heading") {
         return;
     }
