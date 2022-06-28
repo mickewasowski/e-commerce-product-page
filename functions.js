@@ -60,6 +60,10 @@ function addToCart() {
 
     let checkoutBtn = document.getElementById("checkout-btn");
     checkoutBtn.style.display = "block";
+
+    let cartCountBubble = document.getElementById("cart-count");
+    cartCountBubble.style.display = "inline-block";
+    cartCountBubble.innerHTML = quantity;
 }
 
 function removeFromCart() {
@@ -71,6 +75,10 @@ function removeFromCart() {
 
     let emptyCartText = document.getElementById("empty-cart");
     emptyCartText.style.display = "block";
+
+    let cartCountBubble = document.getElementById("cart-count");
+    cartCountBubble.innerHTML = 0;
+    cartCountBubble.style.display = "none";
 }
 
 function selectImage() {

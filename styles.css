@@ -94,6 +94,19 @@ header {
     fill: hsl(219, 9%, 45%);
 }
 
+#cart-count {
+    width: 25px;
+    height: 16px;
+    position: relative;
+    top: -13%;
+    right: -27%;
+    background-color: hsl(26, 100%, 55%);
+    text-align: center;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+}
 
 /* cart dropdown */
 #cart-list {
