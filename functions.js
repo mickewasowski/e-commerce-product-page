@@ -163,3 +163,61 @@ function selectImage() {
     let selectedParent = selectedThumbImg.parentElement;
     selectedParent.classList.add("focus-container");
 }
+
+function previousImage() {
+    let bigImages = Array.from(document.getElementsByClassName("current-image"));
+    let thumbs = Array.from(document.getElementsByClassName("image-thmb"));
+
+    let currentThumb = thumbs.find(x => x.classList.contains("focus-thmb-img"));
+    let currId = Number(currentThumb.id);
+
+    if (currId === 1) {
+        return;
+    }
+
+    let currentBig = bigImages[currId - 1];
+    currentBig.style.display = "none";
+    let nextBig = bigImages[currId - 2];
+    nextBig.style.display = "block";
+
+    currentThumb.classList.remove("focus-thmb-img");
+    currentThumb.parentElement.classList.remove("focus-img-container");
+
+    let prevThumb = thumbs[currId - 2];
+    prevThumb.classList.add("focus-thmb-img");
+    prevThumb.parentElement.classList.add("focus-img-container")
+}
+
+function nextImage() {
+    let bigImages = Array.from(document.getElementsByClassName("current-image"));
+    let thumbs = Array.from(document.getElementsByClassName("image-thmb"));
+
+    let currentThumb = thumbs.find(x => x.classList.contains("focus-thmb-img"));
+    let currId = Number(currentThumb.id);
+
+    if (currId === 4) {
+        return;
+    }
+
+    let currentBig = bigImages[currId - 1];
+    currentBig.style.display = "none";
+    let nextBig = bigImages[currId];
+    nextBig.style.display = "block";
+
+    currentThumb.classList.remove("focus-thmb-img");
+    currentThumb.parentElement.classList.remove("focus-img-container");
+
+    let nextThumb = thumbs[currId];
+    nextThumb.classList.add("focus-thmb-img");
+    nextThumb.parentElement.classList.add("focus-img-container")
+}
+
+function closeGallery() {
+    let gallerySection = document.getElementsByClassName("gallery")[0];
+    gallerySection.style.display = "none";
+}
+
+function openGallery() {
+    let gallerySection = document.getElementsByClassName("gallery")[0];
+    gallerySection.style.display = "block";
+}
