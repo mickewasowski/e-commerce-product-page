@@ -12,23 +12,23 @@ function expandCartList() {
 }
 
 function increment() {
-    let currentValue = Number(document.getElementById("quantity").innerHTML);
+    let currentValue = Number(document.getElementById("quantity").value);
 
-    document.getElementById("quantity").innerHTML = currentValue + 1;
+    document.getElementById("quantity").value = currentValue + 1;
 }
 
 function decrement() {
-    let currentValue = Number(document.getElementById("quantity").innerHTML);
+    let currentValue = Number(document.getElementById("quantity").value);
 
     if (currentValue - 1 > 0) {
-        document.getElementById("quantity").innerHTML = currentValue - 1;
+        document.getElementById("quantity").value = currentValue - 1;
     } else if (currentValue - 1 === 0) {
-        document.getElementById("quantity").innerHTML = 0;
+        document.getElementById("quantity").value = 0;
     }
 }
 
 function addToCart() {
-    let quantity = Number(document.getElementById("quantity").innerHTML);
+    let quantity = Number(document.getElementById("quantity").value);
 
     if (quantity === 0) {
         return;
@@ -79,6 +79,9 @@ function removeFromCart() {
     let cartCountBubble = document.getElementById("cart-count");
     cartCountBubble.innerHTML = 0;
     cartCountBubble.style.display = "none";
+
+    let quantity = document.getElementById("quantity");
+    quantity.value = 0;
 }
 
 function selectImage() {
