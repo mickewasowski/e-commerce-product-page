@@ -277,12 +277,14 @@ main {
     align-items: center;
 }
 
-.other-images>div.image-container:hover {
+.focus-container {
     outline: 3px solid hsl(26, 100%, 55%);
 }
 
+.focus-img,
 .other-images>div.image-container>div.image:hover {
     opacity: .4;
+    cursor: pointer;
 }
 
 /* details section */

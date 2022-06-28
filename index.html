@@ -84,22 +84,30 @@
     <main>
       <section class="shoe-images-container">
         <div class="main-image">
-          <img src="./images/image-product-1.jpg" />
+          <img class="big-image" style="display: block" src="./images/image-product-1.jpg" />
+          <img class="big-image" style="display: none" src="./images/image-product-2.jpg" />
+          <img class="big-image" style="display: none" src="./images/image-product-3.jpg" />
+          <img class="big-image" style="display: none" src="./images/image-product-4.jpg" />
         </div>
         <div class="other-images">
-          <div class="image-container">
-            <div class="image" style="background-image: url(./images/image-product-1-thumbnail.jpg);"></div>
-          </div>
-          <div class="image-container">
-            <div class="image" style="background-image: url(./images/image-product-2-thumbnail.jpg);">
+          <div class="image-container focus-container">
+            <div class="image focus-img" id="1" style="background-image: url(./images/image-product-1-thumbnail.jpg);"
+              onclick="selectImage()">
             </div>
           </div>
           <div class="image-container">
-            <div class="image" style="background-image: url(./images/image-product-3-thumbnail.jpg);">
+            <div class="image" id="2" style="background-image: url(./images/image-product-2-thumbnail.jpg);"
+              onclick="selectImage()">
             </div>
           </div>
           <div class="image-container">
-            <div class="image" style="background-image: url(./images/image-product-4-thumbnail.jpg);">
+            <div class="image" id="3" style="background-image: url(./images/image-product-3-thumbnail.jpg);"
+              onclick="selectImage()">
+            </div>
+          </div>
+          <div class="image-container">
+            <div class="image" id="4" style="background-image: url(./images/image-product-4-thumbnail.jpg);"
+              onclick="selectImage()">
             </div>
           </div>
         </div>

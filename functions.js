@@ -72,3 +72,27 @@ function removeFromCart() {
     let emptyCartText = document.getElementById("empty-cart");
     emptyCartText.style.display = "block";
 }
+
+function selectImage() {
+    let currentId = Number(event.target.id);
+
+    let bigElements = Array.from(document.getElementsByClassName("big-image"));
+
+    let previous = bigElements.find(x => x.style.display === "block");
+    previous.style.display = "none";
+
+    let next = bigElements[currentId - 1];
+    next.style.display = "block";
+
+    let currentThumbImg = document.getElementsByClassName("focus-img")[0];
+    currentThumbImg.classList.remove("focus-img")
+
+    let parentThumbImgDiv = currentThumbImg.parentElement;
+    parentThumbImgDiv.classList.remove("focus-container");
+
+    let selectedThumbImg = document.getElementById(currentId);
+    selectedThumbImg.classList.add("focus-img");
+
+    let selectedParent = selectedThumbImg.parentElement;
+    selectedParent.classList.add("focus-container");
+}
