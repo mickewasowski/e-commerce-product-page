@@ -832,9 +832,48 @@ input[type="number"] {
         align-items: center;
     }
 
-    .navigation-container {
-        display: none;
+    #backdrop-mobile-navbar {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        z-index: 2;
+        background-color: hsla(0, 0%, 0%, 0.75);
     }
+
+    .navigation-container {
+        display: block;
+        z-index: 3;
+        width: 60vw;
+        height: 100vh;
+        margin: 0;
+        position: absolute;
+        left: 0%;
+        background-color: hsl(0, 0%, 100%);
+        z-index: 3;
+    }
+
+    #close-navbar {
+        display: inline-block;
+        width: 100%;
+        height: 3rem;
+        padding-left: 1rem;
+        padding-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .navigation ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navigation ul li {
+        color: hsl(220, 13%, 13%);
+        font-weight: 700;
+        padding: 0;
+        text-align: left;
+    }
+
 
     main {
         display: flex;
