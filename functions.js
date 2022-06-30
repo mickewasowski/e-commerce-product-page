@@ -218,6 +218,56 @@ function closeGallery() {
 }
 
 function openGallery() {
+    let bodyTagWidth = document.body.offsetWidth;
+
+    if (bodyTagWidth <= 900) {
+        return;
+    }
+
     let gallerySection = document.getElementsByClassName("gallery")[0];
     gallerySection.style.display = "block";
+}
+
+function nextImageMobile() {
+    let bigImages = Array.from(document.getElementsByClassName("big-image"));
+
+    let currBig = bigImages.find(x => x.style.display === "block");
+    let currId = Number(currBig.id);
+
+    if (currId === 4) {
+        return;
+    }
+
+    currBig.style.display = "none";
+    let nextBig = bigImages[currId];
+    nextBig.style.display = "block";
+}
+
+function prevImageMobile() {
+    let bigImages = Array.from(document.getElementsByClassName("big-image"));
+
+    let currBig = bigImages.find(x => x.style.display === "block");
+    let currId = Number(currBig.id);
+
+
+    if (currId === 1) {
+        return;
+    }
+
+    currBig.style.display = "none";
+    let nextBig = bigImages[currId - 2];
+    nextBig.style.display = "block";
+}
+
+function toggleNavbar() {
+    let navbar = document.getElementsByClassName("navigation-container")[0];
+    let backdrop = document.getElementById("backdrop-mobile-navbar");
+
+    if (navbar.style.display === "none") {
+        backdrop.style.display = "block";
+        navbar.style.display = "block";
+    } else {
+        navbar.style.display = "none";
+        backdrop.style.display = "none";
+    }
 }
