@@ -52,6 +52,10 @@ header {
     margin: 10px;
 }
 
+#close-navbar {
+    display: none;
+}
+
 .navigation {
     display: flex;
     flex-direction: row;
@@ -66,14 +70,14 @@ header {
 
 .navigation ul li {
     margin: 15px;
-    padding: 2.9rem 0;
+    padding: 2.4rem 0;
     list-style-type: none;
     color: hsl(219, 9%, 45%);
-    border-bottom: 4px solid transparent;
+    border-bottom: 2px solid transparent;
 }
 
 .navigation ul li:hover {
-    border-bottom: 4px solid hsl(26, 100%, 55%);
+    border-bottom: 2px solid hsl(26, 100%, 55%);
     cursor: pointer;
     color: hsl(220, 13%, 13%);
 }
@@ -612,8 +616,8 @@ input[type="number"] {
 
     header {
         display: flex;
-        justify-content: space-between;
-        padding: 0 1rem;
+        justify-content: space-around;
+        padding: 0;
         margin-top: 0;
         margin-bottom: 0;
     }
@@ -646,7 +650,7 @@ input[type="number"] {
     }
 
     .navigation-container {
-        display: block;
+        display: none;
         z-index: 3;
         width: 60vw;
         height: 100vh;
@@ -655,6 +659,26 @@ input[type="number"] {
         left: 0%;
         background-color: hsl(0, 0%, 100%);
         z-index: 3;
+    }
+
+    .cart-container {
+        margin-right: 20px;
+        border: none;
+        background-color: transparent;
+    }
+
+    #cart-count {
+        width: 16px;
+        height: 16px;
+        position: relative;
+        top: -13%;
+        right: -27%;
+        background-color: hsl(26, 100%, 55%);
+        text-align: center;
+        border-radius: 10px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: hsl(0, 0%, 100%);
     }
 
     #close-navbar {
@@ -841,7 +865,7 @@ input[type="number"] {
     }
 
     .navigation-container {
-        display: block;
+        display: none;
         z-index: 3;
         width: 60vw;
         height: 100vh;
@@ -981,5 +1005,17 @@ input[type="number"] {
 
     .add-to-cart-btn>button {
         width: 100%;
+    }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1440px) {
+
+    .page-container {
+        margin: 0 4rem;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
     }
 }

@@ -154,14 +154,18 @@ function selectImage() {
     let currentThumbImg = document.getElementsByClassName("focus-img")[0];
     currentThumbImg.classList.remove("focus-img")
 
+    console.log(currentThumbImg);
+
     let parentThumbImgDiv = currentThumbImg.parentElement;
     parentThumbImgDiv.classList.remove("focus-container");
 
-    let selectedThumbImg = document.getElementById(currentId);
-    selectedThumbImg.classList.add("focus-img");
+    console.log(parentThumbImgDiv);
 
-    let selectedParent = selectedThumbImg.parentElement;
-    selectedParent.classList.add("focus-container");
+    let elements = Array.from(document.getElementsByClassName('image'));
+    elements[currentId - 1].classList.add('focus-img')
+
+    let parents = Array.from(document.getElementsByClassName('image-container'));
+    parents[currentId - 1].classList.add('focus-container');
 }
 
 function previousImage() {
@@ -263,9 +267,13 @@ function toggleNavbar() {
     let navbar = document.getElementsByClassName("navigation-container")[0];
     let backdrop = document.getElementById("backdrop-mobile-navbar");
 
-    if (navbar.style.display === "none") {
-        backdrop.style.display = "block";
+    if (navbar.style.display === "none" || navbar.style.display === '') {
+
         navbar.style.display = "block";
+        backdrop.style.display = "block";
+
+        let closing = document.getElementById('close-navbar');
+        closing.style.display = 'block';
     } else {
         navbar.style.display = "none";
         backdrop.style.display = "none";
