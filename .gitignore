@@ -2,6 +2,9 @@
 #####################################################
 ## Please do not remove lines 5 and 6 - thanks! 🙂 ##
 #####################################################
+# dependencies
+/node_modules
+
 *.sketch
 *.fig
 
