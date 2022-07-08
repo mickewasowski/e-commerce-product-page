@@ -399,11 +399,12 @@ main {
     cursor: pointer;
 }
 
-.quantity-buttons span:nth-child(2) {
+/* irrelevant since it has to be an input and not a span*/
+/* .quantity-buttons span:nth-child(2) {
     font-weight: bold;
     font-size: 1.3rem;
     padding-top: 7px;
-}
+} */
 
 .add-to-cart-btn>img {
     position: relative;

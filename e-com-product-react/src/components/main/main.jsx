@@ -8,7 +8,7 @@ function Main(){
     return(
         <MainContainer>
             <ShoeImagesSection />
-            {/* <DetailsSection /> */}
+            <DetailsSection />
         </MainContainer>
     )
 }
