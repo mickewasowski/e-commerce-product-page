@@ -26,14 +26,15 @@ export const CartCount = styled.p`
     width: 25px;
     height: 16px;
     position: relative;
-    top: -13%;
-    right: -27%;
+    top: -17%;
+    right: -32%;
     background-color: hsl(26, 100%, 55%);
     text-align: center;
     border-radius: 10px;
     font-size: 0.8rem;
     font-weight: 700;
     color: hsl(0, 0%, 100%);
+    padding: .2rem .3rem;
 `;
 
 

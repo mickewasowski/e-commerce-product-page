@@ -1,9 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
 import CartList from "./cartList";
 import {UserCartContainer as UserCartCont, CartButton, CartIcon, CartCount, UserIconContainer, UserImg} from './userCartContainer.styles';
 
 function UserCartContainer(){
+    const {cart} = useContext(CartContext);
+    
     const [isCartOpen, setIsCartOpen] = useState(false);
 
     const toggleCart = () => {
@@ -16,7 +19,11 @@ function UserCartContainer(){
 
     return(
         <UserCartCont>
-            <CartCount style={{display: 'none'}}>0</CartCount>
+            {
+                cart.productQuantity > 0
+                ? <CartCount>{cart.productQuantity}</CartCount>
+                : ''
+            }
             <CartButton onClick={toggleCart}>
                 <CartIcon />
             </CartButton>

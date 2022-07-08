@@ -1,8 +1,12 @@
+import {useContext} from 'react';
+import {CartContext} from '../../context/CartContext';
 import CartItem from "./cartItem";
 
 import { CartListContainer, CartHeadingCont, CartHeading, CartContent, EmptyCardP, CheckoutBtn } from './cartList.styles';
 
 function CartList(){
+    const cartInfo = useContext(CartContext);
+    const prodQuantity = cartInfo.cart.productQuantity;
 
     return(
         <CartListContainer>
@@ -10,11 +14,18 @@ function CartList(){
                 <CartHeading>Cart</CartHeading>
             </CartHeadingCont>
             <CartContent>
-                <CartItem />
-                <CheckoutBtn style={{display: 'none'}}>Checkout</CheckoutBtn>
-                <EmptyCardP>
-                    Your cart is empty.
-                </EmptyCardP>
+                {
+                    prodQuantity > 0
+                    ? 
+                    <>
+                        <CartItem />
+                        <CheckoutBtn style={{display: 'none'}}>Checkout</CheckoutBtn>
+                    </>
+                    :
+                    <EmptyCardP>
+                        Your cart is empty.
+                    </EmptyCardP>
+                }
             </CartContent>
         </CartListContainer>
     )
