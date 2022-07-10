@@ -16,7 +16,7 @@ function GalleryComponent({toggle}){
 
     const previous = () => {
         if (current - 1 < 1) {
-            return;
+            setCurrent(4)
         }else{
             setCurrent(current-1)
         }
@@ -24,7 +24,7 @@ function GalleryComponent({toggle}){
 
     const next = () => {
         if (current + 1 > 4) {
-            return;
+            setCurrent(1)
         }else{
             setCurrent(current+1)
         }

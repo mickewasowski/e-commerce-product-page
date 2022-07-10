@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { BsCart3 } from "react-icons/bs";
 
 export const UserCartContainer = styled.div`
-    width: 7%;
+    width: 8rem;
     display: flex;
     justify-content: space-between;
     align-items: center;

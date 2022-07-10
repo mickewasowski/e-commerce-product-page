@@ -22,6 +22,7 @@ function ButtonsContainer(){
 
     const addToCart = () => {
         cartInfo.addProductToCart(quantity);
+        setQuantity(0);
     }
 
     const manualQuantityInput = (e) => {

@@ -13,13 +13,13 @@ function CartList(){
             <CartHeadingCont>
                 <CartHeading>Cart</CartHeading>
             </CartHeadingCont>
-            <CartContent>
+            <CartContent style={prodQuantity > 0 ? {display: 'flex', justifyContent: 'space-between', height: '44%'} : {}}>
                 {
                     prodQuantity > 0
                     ? 
                     <>
                         <CartItem />
-                        <CheckoutBtn style={{display: 'none'}}>Checkout</CheckoutBtn>
+                        <CheckoutBtn>Checkout</CheckoutBtn>
                     </>
                     :
                     <EmptyCardP>
