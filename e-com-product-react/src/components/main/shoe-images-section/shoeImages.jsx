@@ -1,11 +1,14 @@
 import { useState } from 'react';
-import {ShoeImagesContainer, MainImage, OtherImagesContainer, SmallImageContainer, SmallImage} from './shoeImages.styles';
+import {ShoeImagesContainer,MainImgContainer, MainImage,LetfIconContainer,LeftIcon,RightIconContainer,RightIcon, OtherImagesContainer, SmallImageContainer, SmallImage} from './shoeImages.styles';
+
 
 import GalleryComponent from '../gallery/gallery.component';
 
 function ShoeImagesSection(){
     const [selected, setSelected] = useState(1);
     const [isOpen, setIsOpen] = useState(false);
+
+    const windowSize = window.innerWidth;
 
     const toggleGallery = () => {
         if (isOpen) {
@@ -15,12 +18,34 @@ function ShoeImagesSection(){
         }
     }
 
+    const prevImg = () => {
+        if (selected - 1 < 1) {
+            setSelected(4);
+        }else{
+            setSelected(selected - 1);
+        }
+    }
+
+    const nextImg = () => {
+        if (selected + 1 > 4) {
+            setSelected(1);
+        }else{
+            setSelected(selected + 1);
+        }
+    }
+
     return(
         <>
             <ShoeImagesContainer>
-                    <div className="main-image">
+                    <MainImgContainer>
                         <MainImage src={`/images/image-product-${selected}.jpg`} onClick={toggleGallery}/>
-                    </div>
+                        <LetfIconContainer>
+                            <LeftIcon onClick={prevImg}/>
+                        </LetfIconContainer>
+                        <RightIconContainer>
+                            <RightIcon onClick={nextImg}/>
+                        </RightIconContainer>
+                    </MainImgContainer>
                     <OtherImagesContainer>
                         <SmallImageContainer style={selected === 1 ? {outline: "3px solid hsl(26,100%,55%)"} : {}}>
                             <SmallImage style={selected === 1 ? {opacity: ".4", backgroundImage: "url(/images/image-product-1-thumbnail.jpg)"} : {backgroundImage: "url(/images/image-product-1-thumbnail.jpg)"}} onClick={() => setSelected(1)}></SmallImage>
@@ -40,7 +65,7 @@ function ShoeImagesSection(){
                     </OtherImagesContainer>
             </ShoeImagesContainer>
             {
-                isOpen
+                isOpen && windowSize > 768
                 ? <GalleryComponent toggle={toggleGallery}/>
                 : ''
             }

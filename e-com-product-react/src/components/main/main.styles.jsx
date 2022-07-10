@@ -6,4 +6,9 @@ export const MainContainer = styled.main`
     flex-direction: row;
     justify-content: space-around;
     margin: 5rem 3rem 0 3rem;
+
+    @media (min-width: 280px) and (max-width: 750px) {
+        flex-direction: column;
+        margin: 0;
+    }
 `

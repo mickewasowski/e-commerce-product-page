@@ -1,10 +1,14 @@
 import styled from "styled-components";
 
 export const CartButtonsContainer = styled.div`
-display: flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    @media (min-width: 280px) and (max-width: 750px) {
+        flex-direction: column;
+    }
 `
 
 export const QuantityBtnsContainer = styled.div`
@@ -13,6 +17,11 @@ export const QuantityBtnsContainer = styled.div`
     align-items: center;
     background-color: hsl(223, 64%, 98%);
     border-radius: 10px;
+
+    @media (min-width: 280px) and (max-width: 750px) {
+        width: 90%;
+        margin-bottom: 2rem;
+    }
 `
 
 export const BtnSpan = styled.span`
@@ -33,6 +42,10 @@ export const BtnSpan = styled.span`
     &:hover{
         cursor: pointer;
     }
+
+    @media (min-width: 280px) and (max-width: 750px) {
+        width: 30%;
+    }
 `
 
 export const QuantityInput = styled.input`
@@ -50,6 +63,16 @@ export const QuantityInput = styled.input`
 
     &:focus {
         outline: none;
+    }
+
+    @media (min-width: 280px) and (max-width: 750px) {
+        width: 40%;
+    }
+`
+
+export const AddToCartContainer = styled.div`
+    @media (min-width: 280px) and (max-width: 750px) {
+        width: 100%;
     }
 `
 
@@ -74,5 +97,9 @@ export const AddToCartBtn = styled.button`
     &:hover{
         cursor: pointer;
         background-color: hsla(26, 100%, 55%, .7);
+    }
+
+    @media (min-width: 280px) and (max-width: 750px) {
+        width: 90%;
     }
 `

@@ -1,8 +1,7 @@
-import { FaBars } from "react-icons/fa";
-import { MdClose } from "react-icons/md";
+
 
 import UserCartContainer from "./userCartContainer";
-import {BtnsContainer, LogoContainer, LogoLink, NavigationContainer, Nav, NavUL, UlListItem} from './navbar.styles';
+import {BtnsContainer, LogoContainer, LogoLink, NavigationContainer, Nav, NavUL, UlListItem, MenuBtn, CloseMenu} from './navbar.styles';
 
 
 function Navigation(){
@@ -10,14 +9,14 @@ function Navigation(){
     return(
         <>
             <BtnsContainer>
-                <FaBars style={{display: 'none'}}/>
+                <MenuBtn />
                 <LogoContainer>
                     <LogoLink to={'/'}>
                         <img src="/images/logo.svg" />
                     </LogoLink>
                 </LogoContainer>
                 <NavigationContainer>
-                    <MdClose style={{display: 'none'}}/>
+                    <CloseMenu style={{display: 'none'}}/>
                     <Nav>
                         <NavUL>
                             <UlListItem>Collections</UlListItem>

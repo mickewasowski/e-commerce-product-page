@@ -11,6 +11,10 @@ export const GallerySection = styled.section`
     background-color: hsla(0, 0%, 0%, 0.75);
     width: 100%;
     height: 100%;
+
+    @media (min-width: 280px) and (max-width: 750px) {
+        display: 'none';
+    }
 `
 
 export const GalleryContainer = styled.div`

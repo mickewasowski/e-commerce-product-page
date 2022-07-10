@@ -4,7 +4,7 @@ import { CartContext } from '../../../../context/CartContext';
 import {BsPlusLg} from 'react-icons/bs'
 import {BiMinus} from 'react-icons/bi'
 
-import { CartButtonsContainer, QuantityBtnsContainer, BtnSpan, QuantityInput, AddToCartImg, AddToCartBtn } from './buttons.styles';
+import { CartButtonsContainer, QuantityBtnsContainer, BtnSpan, QuantityInput, AddToCartContainer, AddToCartImg, AddToCartBtn } from './buttons.styles';
 
 function ButtonsContainer(){
     const cartInfo = useContext(CartContext);
@@ -42,12 +42,12 @@ function ButtonsContainer(){
                     <BsPlusLg style={{transform: "scale(.7)"}}/>
                 </BtnSpan>
             </QuantityBtnsContainer>
-            <div className="add-to-cart-btn">
+            <AddToCartContainer>
                 <AddToCartImg src="/images/icon-cart.svg" />
                 <AddToCartBtn onClick={addToCart}>
                     Add to cart
                 </AddToCartBtn>
-            </div>
+            </AddToCartContainer>
         </CartButtonsContainer>
     )
 }

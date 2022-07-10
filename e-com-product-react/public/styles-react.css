@@ -4,3 +4,11 @@
     margin: 0 7rem;
     font-family: 'Kumbh Sans', sans-serif;
 }
+
+@media (min-width: 280px) and (max-width: 750px) {
+    body, #root{
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+}

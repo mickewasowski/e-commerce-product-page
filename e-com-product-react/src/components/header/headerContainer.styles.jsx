@@ -7,4 +7,13 @@ export const Header = styled.header`
     border-bottom: 3px solid hsl(223, 64%, 98%);
     display: flex;
     justify-content: space-between;
+
+    @media (min-width: 280px) and (max-width: 750px) {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 `

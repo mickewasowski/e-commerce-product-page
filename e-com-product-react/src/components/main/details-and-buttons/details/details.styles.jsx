@@ -6,6 +6,12 @@ export const DetailsCont = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
+    @media (min-width: 280px) and (max-width: 750px) {
+        width: 90%;
+        height: auto;
+        margin: 1rem;
+    }
 `
 
 export const SneakerHeading = styled.h3`
@@ -13,22 +19,40 @@ export const SneakerHeading = styled.h3`
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 1rem;
+
+    @media (min-width: 280px) and (max-width: 750px) {
+        width: 100%;
+    }
 `
 
 export const LimitedHeading = styled.h1`
     color: hsl(220, 13%, 13%);
     font-size: 3rem;
     margin-top: 1rem;
+
+    @media (min-width: 280px) and (max-width: 750px) {
+        width: 100%;
+    }
 `
 
 export const DescrParag = styled.p`
     line-height: 1.8rem;
     color: hsl(219, 9%, 45%);
+
+    @media (min-width: 280px) and (max-width: 750px) {
+        width: 100%;
+    }
 `
 
 export const PriceContainer = styled.div`
     display: flex;
     flex-direction: column;
+
+    @media (min-width: 280px) and (max-width: 750px) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
 `
 
 export const CurrentPriceCont = styled.div`
@@ -57,6 +81,10 @@ export const DiscountAmount = styled.p`
 
 export const OriginalPriceCont = styled.div`
     margin-top: 1rem;
+
+    @media (min-width: 280px) and (max-width: 750px) {
+        margin: 0;
+    }
 `
 
 export const OriginalPrice = styled.p`
