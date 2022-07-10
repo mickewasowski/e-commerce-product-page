@@ -42,13 +42,44 @@ export const CloseMenu = styled(MdClose)`
         padding-left: 1rem;
         padding-top: 1rem;
         margin-bottom: 2rem;
+        transform: scale(.5);
+
+        position: relative;
+        right: 46%;
     }
+`
+
+export const BlackOut = styled.div`
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000c2;
 `
 
 export const NavigationContainer = styled.div`
     display: flex;
     align-items: center;
     margin: 10px;
+
+    @media (min-width: 280px) and (max-width: 750px) {
+        display: none;
+        flex-direction: column;
+
+        z-index: 4;
+        top: 0%;
+        left: 0%;
+        position: absolute;
+        display: flex;
+        margin: 0;
+        background-color: white;
+        width: 45%;
+        height:100vh; 
+
+        align-items: flex-start;
+    }
 `
 
 export const Nav = styled.nav`
@@ -57,6 +88,8 @@ export const Nav = styled.nav`
 
     @media (min-width: 280px) and (max-width: 750px) {
         display: none;
+
+        width: 100%;
     }
 `
 
@@ -65,6 +98,12 @@ export const NavUL = styled.ul`
     flex-direction: row;
     align-items: center;
     justify-content: center;
+
+    @media (min-width: 280px) and (max-width: 750px) {
+        z-index: 4;
+        flex-direction: column;
+        padding: 0 1rem;
+    }
 `
 
 export const UlListItem = styled.li`
@@ -78,5 +117,11 @@ export const UlListItem = styled.li`
         border-bottom: 2px solid hsl(26, 100%, 55%);
         cursor: pointer;
         color: hsl(220, 13%, 13%);
+    }
+
+    @media (min-width: 280px) and (max-width: 750px) {
+        width: 100%;
+        padding: 0;
+        text-align: left;
     }
 `

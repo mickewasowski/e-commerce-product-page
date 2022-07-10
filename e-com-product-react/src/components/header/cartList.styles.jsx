@@ -11,6 +11,13 @@ export const CartListContainer = styled.div`
     box-shadow: 0 25px 25px rgba(0, 0, 0, 0.08);
 
     flex-direction: column;
+
+    @media (min-width: 280px) and (max-width: 750px) {
+        z-index: 3;
+        width: 97%;
+        right: 1.5%;
+        top: 7%;
+    }
 `
 
 export const CartHeadingCont = styled.div`
