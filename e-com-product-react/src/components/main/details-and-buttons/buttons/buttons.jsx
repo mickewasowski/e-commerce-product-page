@@ -8,7 +8,6 @@ import { CartButtonsContainer, QuantityBtnsContainer, BtnSpan, QuantityInput, Ad
 
 function ButtonsContainer(){
     const cartInfo = useContext(CartContext);
-    
     const [quantity, setQuantity] = useState(0)
 
     const increment = () => setQuantity(quantity + 1);
@@ -27,7 +26,7 @@ function ButtonsContainer(){
 
     const manualQuantityInput = (e) => {
         if (e.target.value !== '' || e.target.value > 0) {
-            setQuantity(e.target.value);
+            setQuantity(Number(e.target.value));
         }
     }
 
@@ -37,7 +36,7 @@ function ButtonsContainer(){
                 <BtnSpan onClick={decrement}>
                     <BiMinus />
                 </BtnSpan>
-                <QuantityInput defaultValue={quantity} type="number" min="0" onChange={manualQuantityInput}/>
+                <QuantityInput value={quantity} type="number" min="0" onChange={manualQuantityInput}/>
                 <BtnSpan onClick={increment}>
                     <BsPlusLg style={{transform: "scale(.7)"}}/>
                 </BtnSpan>
