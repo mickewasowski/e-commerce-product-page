@@ -6,6 +6,10 @@ export const UserCartContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (min-width: 280px) and (max-width: 768px){
+        width: auto;
+    }
 `;
 
 export const CartButton = styled.button`
@@ -15,6 +19,10 @@ export const CartButton = styled.button`
 
     &:hover{
         cursor: pointer;
+    }
+
+    @media (min-width: 280px) and (max-width: 768px){
+        margin: 0;
     }
 `;
 
@@ -48,6 +56,10 @@ export const UserIconContainer = styled.div`
     &:hover{
         outline: 3px solid hsl(26, 100%, 55%);
         cursor: pointer;
+    }
+
+    @media (min-width: 280px) and (max-width: 768px){
+        width: 20%;
     }
 `;
 

@@ -6,8 +6,10 @@ export const CartButtonsContainer = styled.div`
     justify-content: space-between;
     align-items: center;
 
-    @media (min-width: 280px) and (max-width: 750px) {
+    @media (min-width: 280px) and (max-width: 768px) {
         flex-direction: column;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
     }
 `
 
@@ -18,9 +20,10 @@ export const QuantityBtnsContainer = styled.div`
     background-color: hsl(223, 64%, 98%);
     border-radius: 10px;
 
-    @media (min-width: 280px) and (max-width: 750px) {
-        width: 90%;
-        margin-bottom: 2rem;
+    @media (min-width: 280px) and (max-width: 768px) {
+        width: 100%;
+        margin-bottom: 1rem;
+        border-radius: 0;
     }
 `
 
@@ -43,8 +46,8 @@ export const BtnSpan = styled.span`
         cursor: pointer;
     }
 
-    @media (min-width: 280px) and (max-width: 750px) {
-        width: 30%;
+    @media (min-width: 280px) and (max-width: 768px) {
+        width: 35%;
     }
 `
 
@@ -57,31 +60,27 @@ export const QuantityInput = styled.input`
     font-weight: 700;
     color: hsl(0, 0%, 0%);
 
-    ${'' /* -moz-appearance: textfield;
-    -webkit-appearance: none;
-    margin: 0; */}
-
     &:focus {
         outline: none;
     }
 
-    @media (min-width: 280px) and (max-width: 750px) {
-        width: 40%;
+    @media (min-width: 280px) and (max-width: 768px) {
+        width: 30%;
     }
 `
 
 export const AddToCartContainer = styled.div`
-    @media (min-width: 280px) and (max-width: 750px) {
+    @media (min-width: 280px) and (max-width: 768px) {
         width: 100%;
     }
 `
 
-export const AddToCartImg = styled.img`
-    position: relative;
-    display: inline;
-    right: -28%;
-    top: 3px;
-`
+// export const AddToCartImg = styled.img`
+//     position: relative;
+//     display: inline;
+//     right: -28%;
+//     top: 3px;
+// `
 
 export const AddToCartBtn = styled.button`
     width: 19rem;
@@ -99,7 +98,8 @@ export const AddToCartBtn = styled.button`
         background-color: hsla(26, 100%, 55%, .7);
     }
 
-    @media (min-width: 280px) and (max-width: 750px) {
-        width: 90%;
+    @media (min-width: 280px) and (max-width: 768px) {
+        width: 100%;
+        border-radius: 0;
     }
 `

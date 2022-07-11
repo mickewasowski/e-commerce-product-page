@@ -7,10 +7,10 @@ export const DetailsCont = styled.div`
     flex-direction: column;
     justify-content: space-around;
 
-    @media (min-width: 280px) and (max-width: 750px) {
+    @media (min-width: 280px) and (max-width: 768px) {
         width: 90%;
         height: auto;
-        margin: 1rem;
+        margin: 0;
     }
 `
 
@@ -20,7 +20,7 @@ export const SneakerHeading = styled.h3`
     letter-spacing: 2px;
     font-size: 1rem;
 
-    @media (min-width: 280px) and (max-width: 750px) {
+    @media (min-width: 280px) and (max-width: 768px) {
         width: 100%;
     }
 `
@@ -30,7 +30,7 @@ export const LimitedHeading = styled.h1`
     font-size: 3rem;
     margin-top: 1rem;
 
-    @media (min-width: 280px) and (max-width: 750px) {
+    @media (min-width: 280px) and (max-width: 768px) {
         width: 100%;
     }
 `
@@ -39,7 +39,7 @@ export const DescrParag = styled.p`
     line-height: 1.8rem;
     color: hsl(219, 9%, 45%);
 
-    @media (min-width: 280px) and (max-width: 750px) {
+    @media (min-width: 280px) and (max-width: 768px) {
         width: 100%;
     }
 `
@@ -48,7 +48,7 @@ export const PriceContainer = styled.div`
     display: flex;
     flex-direction: column;
 
-    @media (min-width: 280px) and (max-width: 750px) {
+    @media (min-width: 280px) and (max-width: 768px) {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
@@ -82,7 +82,7 @@ export const DiscountAmount = styled.p`
 export const OriginalPriceCont = styled.div`
     margin-top: 1rem;
 
-    @media (min-width: 280px) and (max-width: 750px) {
+    @media (min-width: 280px) and (max-width: 768px) {
         margin: 0;
     }
 `

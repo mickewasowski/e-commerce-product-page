@@ -6,6 +6,8 @@ import {BtnsContainer, LogoContainer, LogoLink,BlackOut, NavigationContainer, Na
 function Navigation(){
     const [isOpen, setIsOpen] = useState(false);
 
+    const windowWidth = window.innerWidth;
+    
     const toggleNavigation = () => {
         if (isOpen) {
             setIsOpen(false)

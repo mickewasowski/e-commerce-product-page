@@ -1,13 +1,15 @@
 import DetailsContainer from "./details/details";
 import ButtonsContainer from './buttons/buttons';
 
+import {DetailsSectionContainer} from './detailsAndButtons.styles';
+
 function DetailsSection(){
 
     return(
-        <section className="details-and-buttons-container">
+        <DetailsSectionContainer>
             <DetailsContainer />
             <ButtonsContainer />
-        </section>
+        </DetailsSectionContainer>
     )
 }
 

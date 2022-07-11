@@ -7,28 +7,32 @@ export const ShoeImagesContainer = styled.div`
     flex-direction: column;
     width: 500px;
 
-    @media (min-width: 280px) and (max-width: 750px) {
+    @media (min-width: 280px) and (max-width: 768px) {
         width: 100%;
     }
 `
 
 export const MainImgContainer = styled.div`
-    width: 100vw;
-    height: 37vh;
+    width: 100%;
+    height: auto;
+
+    @media (min-width: 280px) and (max-width: 768px) {
+        width: 100vw;
+        height: 25rem;
+    }
 `
 
 export const MainImage = styled.img`
     width: 500px;
-    height: 500px;
     border-radius: 15px;
 
     &:hover{
         cursor: pointer;
     }
 
-    @media (min-width: 280px) and (max-width: 750px) {
+    @media (min-width: 280px) and (max-width: 768px) {
         width: 100%;
-        height: auto;
+        height: 100%;
         border-radius: 0;
     }
 `
@@ -36,7 +40,8 @@ export const MainImage = styled.img`
 export const LetfIconContainer = styled.div`
     display: none;
 
-    @media (min-width: 280px) and (max-width: 750px) {
+
+    @media (min-width: 280px) and (max-width: 768px) {
         margin: 0;
         width: 7%;
         height: 7%;
@@ -55,7 +60,7 @@ export const LetfIconContainer = styled.div`
 export const LeftIcon = styled(MdOutlineChevronLeft)`
     display: none;
 
-    @media (min-width: 280px) and (max-width: 750px) {
+    @media (min-width: 280px) and (max-width: 768px) {
         transform: scale(2);
         display: inline-block;
     }
@@ -64,7 +69,7 @@ export const LeftIcon = styled(MdOutlineChevronLeft)`
 export const RightIconContainer = styled.div`
     display: none;
 
-    @media (min-width: 280px) and (max-width: 750px) {
+    @media (min-width: 280px) and (max-width: 768px) {
         margin: 0;
         width: 7%;
         height: 7%;
@@ -74,7 +79,7 @@ export const RightIconContainer = styled.div`
         align-items: center;
         position: relative;
         top: -64%;
-        left: 92%;
+        left: 82%;
         background-color: white;
         border-radius: 50%;
     }
@@ -83,7 +88,7 @@ export const RightIconContainer = styled.div`
 export const RightIcon = styled(MdOutlineNavigateNext)`
     display: none;
 
-    @media (min-width: 280px) and (max-width: 750px) {
+    @media (min-width: 280px) and (max-width: 768px) {
         transform: scale(2);
         display: inline-block;
     }
@@ -95,7 +100,7 @@ export const OtherImagesContainer = styled.div`
     justify-content: space-between;
     margin-top: 2rem;
 
-    @media (min-width: 280px) and (max-width: 750px) {
+    @media (min-width: 280px) and (max-width: 768px) {
         display: none;
     }
 `

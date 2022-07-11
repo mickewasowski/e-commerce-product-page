@@ -12,7 +12,7 @@ export const CartListContainer = styled.div`
 
     flex-direction: column;
 
-    @media (min-width: 280px) and (max-width: 750px) {
+    @media (min-width: 280px) and (max-width: 768px) {
         z-index: 3;
         width: 97%;
         right: 1.5%;

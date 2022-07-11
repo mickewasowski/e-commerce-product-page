@@ -5,7 +5,7 @@
     font-family: 'Kumbh Sans', sans-serif;
 }
 
-@media (min-width: 280px) and (max-width: 750px) {
+@media (min-width: 280px) and (max-width: 768px) {
     body, #root{
         width: 100%;
         height: auto;

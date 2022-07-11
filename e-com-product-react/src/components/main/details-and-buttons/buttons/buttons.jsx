@@ -3,6 +3,7 @@ import { CartContext } from '../../../../context/CartContext';
 
 import {BsPlusLg} from 'react-icons/bs'
 import {BiMinus} from 'react-icons/bi'
+import { BsCart3 } from "react-icons/bs";
 
 import { CartButtonsContainer, QuantityBtnsContainer, BtnSpan, QuantityInput, AddToCartContainer, AddToCartImg, AddToCartBtn } from './buttons.styles';
 
@@ -43,8 +44,9 @@ function ButtonsContainer(){
                 </BtnSpan>
             </QuantityBtnsContainer>
             <AddToCartContainer>
-                <AddToCartImg src="/images/icon-cart.svg" />
+                {/* <AddToCartImg src="/images/icon-cart.svg" /> */}
                 <AddToCartBtn onClick={addToCart}>
+                    <BsCart3/>
                     Add to cart
                 </AddToCartBtn>
             </AddToCartContainer>

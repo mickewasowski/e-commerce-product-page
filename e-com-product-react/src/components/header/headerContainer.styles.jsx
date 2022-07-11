@@ -8,12 +8,19 @@ export const Header = styled.header`
     display: flex;
     justify-content: space-between;
 
-    @media (min-width: 280px) and (max-width: 750px) {
-        width: 100%;
+    @media (min-width: 280px) and (max-width: 768px) {
+        ${'' /* width: 100vw;
         display: flex;
         justify-content: space-around;
         padding: 0;
         margin-top: 0;
+        margin-bottom: 0; */}
+
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin-top: 0;
         margin-bottom: 0;
+        width: 90%;
     }
 `

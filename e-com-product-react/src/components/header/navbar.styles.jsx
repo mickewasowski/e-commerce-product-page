@@ -14,6 +14,10 @@ export const BtnsContainer = styled.div`
 export const LogoContainer = styled.div`
     display: flex;
     margin-right: 25px;
+
+    @media (min-width: 280px) and (max-width: 768px){
+        margin: 0;
+    }
 `
 
 export const LogoLink = styled(NavLink)`
@@ -24,7 +28,7 @@ export const LogoLink = styled(NavLink)`
 export const MenuBtn = styled(FaBars)`
     display: none;
 
-    @media (min-width: 280px) and (max-width: 750px) {
+    @media (min-width: 280px) and (max-width: 768px) {
         display: block;
         align-self: center;
         margin-right: .7rem;
@@ -35,7 +39,7 @@ export const MenuBtn = styled(FaBars)`
 export const CloseMenu = styled(MdClose)`
     display: none;
 
-    @media (min-width: 280px) and (max-width: 750px) {
+    @media (min-width: 280px) and (max-width: 768px) {
         display: inline-block;
         width: 100%;
         height: 3rem;
@@ -64,7 +68,7 @@ export const NavigationContainer = styled.div`
     align-items: center;
     margin: 10px;
 
-    @media (min-width: 280px) and (max-width: 750px) {
+    @media (min-width: 280px) and (max-width: 768px) {
         display: none;
         flex-direction: column;
 
@@ -86,7 +90,7 @@ export const Nav = styled.nav`
     display: flex;
     flex-direction: row;
 
-    @media (min-width: 280px) and (max-width: 750px) {
+    @media (min-width: 280px) and (max-width: 768px) {
         display: none;
 
         width: 100%;
@@ -99,7 +103,7 @@ export const NavUL = styled.ul`
     align-items: center;
     justify-content: center;
 
-    @media (min-width: 280px) and (max-width: 750px) {
+    @media (min-width: 280px) and (max-width: 768px) {
         z-index: 4;
         flex-direction: column;
         padding: 0 1rem;
@@ -119,7 +123,7 @@ export const UlListItem = styled.li`
         color: hsl(220, 13%, 13%);
     }
 
-    @media (min-width: 280px) and (max-width: 750px) {
+    @media (min-width: 280px) and (max-width: 768px) {
         width: 100%;
         padding: 0;
         text-align: left;
